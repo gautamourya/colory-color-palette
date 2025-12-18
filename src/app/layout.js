@@ -1,4 +1,4 @@
-import Navbar from "@/components/navbar/Nav";
+import ConditionalNavbar from "@/components/navbar/ConditionalNavbar";
 import "../style/globals.css";
 
 // const geistSans = Geist({
@@ -20,8 +20,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        {children}
+        <ConditionalNavbar>
+          {children}
+        </ConditionalNavbar>
       </body>
     </html>
   );

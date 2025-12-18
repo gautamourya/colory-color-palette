@@ -177,14 +177,14 @@ export default function Navbar() {
               </Link>
 
               <Link
-                href="/signin"
+                href="/auth"
                 className="rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100 transition"
               >
                 Sign in
               </Link>
 
               <Link
-                href="/signup"
+                href="/auth"
                 className="ml-1 rounded-md bg-blue-600 px-4 py-2 text-base font-semibold text-white hover:bg-blue-700 transition"
               >
                 Sign up
