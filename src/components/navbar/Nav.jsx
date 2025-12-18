@@ -178,7 +178,7 @@ export default function Navbar() {
 
               <Link
                 href="/auth"
-                className="rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100 transition"
+                className="rounded-md px-3 py-2 text-base font-medium text-gray-800 hover: transition"
               >
                 Sign in
               </Link>

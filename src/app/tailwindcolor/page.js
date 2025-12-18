@@ -1,4 +1,18 @@
 "use client";
+import { WandSparkles } from "lucide-react";
+import {
+  Camera,
+  Heart,
+  Glasses,
+  Shapes,
+  Eye,
+  Settings,
+  Upload,
+  Wand2,
+  CircleCheckBig,
+  Plus,
+  Star,
+} from "lucide-react";
 
 export default function TailwindColorsPage() {
   return (
@@ -97,8 +111,10 @@ export default function TailwindColorsPage() {
             {/* ================= LEFT CARD ================= */}
             <div className="rounded-2xl bg-[#CCE0FF] p-6 flex flex-col justify-between">
               <div>
-                <div className="text-3xl mb-4">✨</div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-black">
+                <div className="text-3xl mb-4">
+                  <WandSparkles size={40} />
+                </div>
+                <h3 className="text-2xl lg:text-4xl  font-bold text-black">
                   Increase your revenue by 3x
                 </h3>
                 <p className="mt-3 lg:text-md text-black">
@@ -107,13 +123,13 @@ export default function TailwindColorsPage() {
                 </p>
               </div>
 
-              <button className="mt-6 rounded-full bg-blue-600 py-3 text-white font-semibold hover:bg-blue-700 transition">
+              <button className="mt-6 rounded-full bg-blue-600 py-3 text-white font-semibold hover:bg-(--color-hover-blue) transition">
                 Start growing
               </button>
             </div>
 
             {/* ================= CATEGORIES ================= */}
-            <div className="rounded-2xl border border-gray-200 p-6">
+            {/* <div className="rounded-2xl border border-gray-200 p-6">
               <h4 className="text-lg font-semibold mb-6">Categories</h4>
 
               <div className="grid grid-cols-4 gap-5 text-center">
@@ -135,52 +151,183 @@ export default function TailwindColorsPage() {
                   </div>
                 ))}
               </div>
+            </div> */}
+
+            <div className="rounded-2xl border border-gray-200 p-6 sm:p-8 lg:p-10">
+              <h4 className="mb-6 text-base sm:text-lg font-semibold text-black">
+                Categories
+              </h4>
+
+              {/* 🔑 4 columns everywhere */}
+              <div className="grid grid-cols-4 gap-y-6 gap-x-4 sm:gap-7 text-center">
+                {/* Grocery */}
+                <div className="flex flex-col items-center">
+                  <div className="mb-2 flex h-14 w-14 sm:h-16 sm:w-16 lg:h-18 lg:w-18 items-center justify-center rounded-full bg-blue-200">
+                    <Camera className="text-blue-700" size={22} />
+                  </div>
+                  <p className="text-xs sm:text-sm font-medium text-gray-800 leading-tight">
+                    Grocery Stores
+                  </p>
+                </div>
+
+                {/* Cafe */}
+                <div className="flex flex-col items-center">
+                  <div className="mb-2 flex h-14 w-14 sm:h-16 sm:w-16 lg:h-18 lg:w-18 items-center justify-center rounded-full bg-blue-300">
+                    <Heart className="text-blue-800" size={22} />
+                  </div>
+                  <p className="text-xs sm:text-sm font-medium text-gray-800 leading-tight">
+                    Cafe & Restaurants
+                  </p>
+                </div>
+
+                {/* Utilities */}
+                <div className="flex flex-col items-center">
+                  <div className="mb-2 flex h-14 w-14 sm:h-16 sm:w-16 lg:h-18 lg:w-18 items-center justify-center rounded-full bg-blue-100">
+                    <Glasses className="text-blue-700" size={22} />
+                  </div>
+                  <p className="text-xs sm:text-sm font-medium text-gray-800">
+                    Utilities
+                  </p>
+                </div>
+
+                {/* Sport */}
+                <div className="flex flex-col items-center">
+                  <div className="mb-2 flex h-14 w-14 sm:h-16 sm:w-16 lg:h-18 lg:w-18 items-center justify-center rounded-full bg-blue-200">
+                    <Shapes className="text-blue-700" size={22} />
+                  </div>
+                  <p className="text-xs sm:text-sm font-medium text-gray-800">
+                    Sport
+                  </p>
+                </div>
+
+                {/* Taxi */}
+                <div className="flex flex-col items-center">
+                  <div className="mb-2 flex h-14 w-14 sm:h-16 sm:w-16 lg:h-18 lg:w-18 items-center justify-center rounded-full bg-blue-300">
+                    <Eye className="text-blue-800" size={22} />
+                  </div>
+                  <p className="text-xs sm:text-sm font-medium text-gray-800">
+                    Taxi
+                  </p>
+                </div>
+
+                {/* Pharmacies */}
+                <div className="flex flex-col items-center">
+                  <div className="mb-2 flex h-14 w-14 sm:h-16 sm:w-16 lg:h-18 lg:w-18 items-center justify-center rounded-full bg-blue-100">
+                    <Settings className="text-blue-700" size={22} />
+                  </div>
+                  <p className="text-xs sm:text-sm font-medium text-gray-800">
+                    Pharmacies
+                  </p>
+                </div>
+
+                {/* Telecom */}
+                <div className="flex flex-col items-center">
+                  <div className="mb-2 flex h-14 w-14 sm:h-16 sm:w-16 lg:h-18 lg:w-18 items-center justify-center rounded-full bg-blue-200">
+                    <Upload className="text-blue-700" size={22} />
+                  </div>
+                  <p className="text-xs sm:text-sm font-medium text-gray-800 leading-tight">
+                    Telecom service
+                  </p>
+                </div>
+
+                {/* Gadgets */}
+                <div className="flex flex-col items-center">
+                  <div className="mb-2 flex h-14 w-14 sm:h-16 sm:w-16 lg:h-18 lg:w-18 items-center justify-center rounded-full bg-blue-300">
+                    <Wand2 className="text-blue-800" size={22} />
+                  </div>
+                  <p className="text-xs sm:text-sm font-medium text-gray-800">
+                    Gadgets
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* ================= PROGRESS ================= */}
-            <div className="rounded-2xl border border-gray-200 p-6 space-y-6">
-              {[
-                {
-                  title: "Home Renovation",
-                  total: "$10.000",
-                  left: "$8.250",
-                  right: "$1.750",
-                  width: "80%",
-                },
-                {
-                  title: "Education & Courses",
-                  total: "$40.000",
-                  left: "$19.500",
-                  right: "$20.500",
-                  width: "55%",
-                },
-                {
-                  title: "Health & Wellness",
-                  total: "$5.500",
-                  left: "$3.000",
-                  right: "$2.500",
-                  width: "65%",
-                },
-              ].map((item, i) => (
-                <div key={i}>
-                  <div className="flex justify-between text-sm font-semibold mb-2">
-                    <span>{item.title}</span>
-                    <span>{item.total}</span>
+            <div className="rounded-2xl border border-gray-200 p-5 sm:p-6 space-y-6">
+              {/* ITEM 1 */}
+              <div className="flex gap-4">
+                {/* ICON */}
+                <div className="h-12 w-12 sm:h-14 sm:w-14 rounded-xl bg-blue-600 flex items-center justify-center shrink-0">
+                  <Camera className="text-white" size={22} />
+                </div>
+
+                {/* CONTENT */}
+                <div className="flex-1">
+                  <div className="flex justify-between items-center mb-2">
+                    <p className="text-sm sm:text-base font-semibold text-black">
+                      Home Renovation
+                    </p>
+                    <p className="text-sm sm:text-base font-semibold">
+                      $10.000
+                    </p>
                   </div>
 
                   <div className="h-2 w-full rounded-full bg-gray-200 overflow-hidden">
-                    <div
-                      className="h-full bg-blue-600 rounded-full"
-                      style={{ width: item.width }}
-                    />
+                    <div className="h-full w-[80%] bg-blue-600 rounded-full" />
                   </div>
 
                   <div className="mt-2 flex justify-between text-xs text-gray-600">
-                    <span>{item.left}</span>
-                    <span>{item.right}</span>
+                    <span>$8.250</span>
+                    <span>$1.750</span>
                   </div>
                 </div>
-              ))}
+              </div>
+
+              <hr className="border-gray-100" />
+
+              {/* ITEM 2 */}
+              <div className="flex gap-4">
+                <div className="h-12 w-12 sm:h-14 sm:w-14 rounded-xl bg-blue-400 flex items-center justify-center shrink-0">
+                  <Glasses className="text-white" size={22} />
+                </div>
+
+                <div className="flex-1">
+                  <div className="flex justify-between items-center mb-2">
+                    <p className="text-sm sm:text-base font-semibold">
+                      Education & Courses
+                    </p>
+                    <p className="text-sm sm:text-base font-semibold">
+                      $40.000
+                    </p>
+                  </div>
+
+                  <div className="h-2 w-full rounded-full bg-gray-200 overflow-hidden">
+                    <div className="h-full w-[55%] bg-blue-400 rounded-full" />
+                  </div>
+
+                  <div className="mt-2 flex justify-between text-xs text-gray-600">
+                    <span>$19.500</span>
+                    <span>$20.500</span>
+                  </div>
+                </div>
+              </div>
+
+              <hr className="border-gray-100" />
+
+              {/* ITEM 3 */}
+              <div className="flex gap-4">
+                <div className="h-12 w-12 sm:h-14 sm:w-14 rounded-xl bg-blue-700 flex items-center justify-center shrink-0">
+                  <Heart className="text-white" size={22} />
+                </div>
+
+                <div className="flex-1">
+                  <div className="flex justify-between items-center mb-2">
+                    <p className="text-sm sm:text-base font-semibold">
+                      Health & Wellness
+                    </p>
+                    <p className="text-sm sm:text-base font-semibold">$5.500</p>
+                  </div>
+
+                  <div className="h-2 w-full rounded-full bg-gray-200 overflow-hidden">
+                    <div className="h-full w-[65%] bg-blue-700 rounded-full" />
+                  </div>
+
+                  <div className="mt-2 flex justify-between text-xs text-gray-600">
+                    <span>$3.000</span>
+                    <span>$2.500</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -188,92 +335,165 @@ export default function TailwindColorsPage() {
           <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* Newsletter */}
             <div className="rounded-2xl border border-gray-200 p-6 space-y-4">
-              <div className="bg-gray-100 rounded-xl p-4">
-                <p className="font-semibold">Newsletter</p>
-                <p className="text-xs text-gray-600">
+              <div className="bg-gray-100 rounded-xl p-8 hover:bg-(--color-hover-gray)">
+                <p className="font-semibold lg:text-2xl">Newsletter</p>
+                <p className="text-xs lg:text-base text-[#787878]">
                   Last message sent an hour ago
                 </p>
               </div>
 
-              <div className="rounded-xl border border-blue-500 bg-blue-50 p-4 flex justify-between items-center">
+              <div className="rounded-xl border border-blue-500 bg-blue-50 p-8 flex justify-between items-center">
                 <div>
-                  <p className="font-semibold text-blue-700">
+                  <p className="font-semibold lg:text-2xl text-blue-700">
                     Existing customers
                   </p>
-                  <p className="text-xs text-gray-600">
+                  <p className="text-xs lg:text-base text-[#787878]">
                     Last message sent 2 weeks ago
                   </p>
                 </div>
-                <span className="h-6 w-6 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs">
-                  ✓
+                <span className="h-6 w-6  text-blue-600 flex items-center justify-center text-xs">
+                  <CircleCheckBig />
                 </span>
               </div>
 
-              <div className="bg-gray-100 rounded-xl p-4">
-                <p className="font-semibold">Trial users</p>
-                <p className="text-xs text-gray-600">
+              <div className="bg-gray-100 rounded-xl p-8 hover:bg-(--color-hover-gray)">
+                <p className="font-semibold lg:text-2xl">Trial users</p>
+                <p className="text-xs lg:text-base text-[#787878]">
                   Last message sent 4 days ago
                 </p>
               </div>
             </div>
 
-            {/* Schedule */}
-            <div className="rounded-2xl border border-gray-200 p-6">
-              <h4 className="text-lg font-semibold mb-6">Schedule</h4>
+            <div className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-6">
+              {/* Header */}
+              <div className="mb-6 flex items-center justify-between">
+                <h4 className="text-lg font-semibold text-black">Schedule</h4>
 
+                <button className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200">
+                  <Plus />
+                </button>
+              </div>
+
+              {/* Schedule Cards */}
               <div className="space-y-4">
-                {[
-                  { time: "9:15", label: "Weekly Team Sync" },
-                  { time: "4:00", label: "Client Pitch Rehearsal" },
-                  { time: "7:30", label: "Product Design Review" },
-                ].map((item, i) => (
-                  <div
-                    key={i}
-                    className="flex gap-4 bg-blue-100 rounded-xl p-4"
-                  >
-                    <div className="text-xl font-bold text-blue-700">
-                      {item.time}
+                {/* ITEM 1 */}
+                <div className="flex gap-4 rounded-xl bg-blue-100 p-4 sm:p-5">
+                  {/* Left blue line */}
+                  <div className="w-1 rounded-full bg-blue-600" />
+
+                  {/* Time */}
+                  <div className="min-w-[64px] text-blue-700">
+                    <div className="text-2xl sm:text-3xl font-bold leading-none">
+                      9:15
                     </div>
-                    <div className="text-sm font-medium text-gray-800">
-                      {item.label}
-                    </div>
+                    <div className="text-xs font-semibold uppercase">AM</div>
                   </div>
-                ))}
+
+                  {/* Content */}
+                  <div>
+                    <p className="text-sm sm:text-base font-semibold text-blue-700">
+                      Weekly Team Sync
+                    </p>
+                    <p className="mt-1 text-xs sm:text-sm text-gray-700">
+                      Quick check-in to align priorities and share updates for
+                      the week.
+                    </p>
+                  </div>
+                </div>
+
+                {/* ITEM 2 */}
+                <div className="flex gap-4 rounded-xl bg-blue-100 p-4 sm:p-5">
+                  <div className="w-1 rounded-full bg-blue-800" />
+
+                  <div className="min-w-[64px] text-blue-800">
+                    <div className="text-2xl sm:text-3xl font-bold leading-none">
+                      4:00
+                    </div>
+                    <div className="text-xs font-semibold uppercase">PM</div>
+                  </div>
+
+                  <div>
+                    <p className="text-sm sm:text-base font-semibold text-blue-800">
+                      Client Pitch Rehearsal
+                    </p>
+                    <p className="mt-1 text-xs sm:text-sm text-gray-700">
+                      Run through tomorrow's presentation and refine messaging
+                      with the team.
+                    </p>
+                  </div>
+                </div>
+
+                {/* ITEM 3 */}
+                <div className="flex gap-4 rounded-xl bg-blue-100 p-4 sm:p-5">
+                  <div className="w-1 rounded-full bg-blue-500" />
+
+                  <div className="min-w-[64px] text-blue-500">
+                    <div className="text-2xl sm:text-3xl font-bold leading-none">
+                      7:30
+                    </div>
+                    <div className="text-xs font-semibold uppercase">PM</div>
+                  </div>
+
+                  <div>
+                    <p className="text-sm sm:text-base font-semibold text-blue-500">
+                      Product Design Review
+                    </p>
+                    <p className="mt-1 text-xs sm:text-sm text-gray-700">
+                      Collaborative session to go over latest UI/UX proposals
+                      and feedback.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Profile */}
-            <div className="rounded-2xl bg-blue-100 p-6 text-center">
-              <div className="mx-auto mb-4 h-40 w-40 rounded-xl bg-gray-300" />
-              <h4 className="text-lg font-bold">Sarah Jones</h4>
-              <p className="text-sm text-gray-600">Product designer</p>
-              <span className="mt-3 inline-block rounded-full bg-blue-600 px-4 py-1 text-xs text-white">
-                Online
-              </span>
+            <div className="rounded-3xl bg-blue-100 p-4 sm:p-5 ">
+              {/* IMAGE */}
+              <div className="w-full overflow-hidden rounded-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGdpcmx8ZW58MHx8MHx8fDA%3D"
+                  alt="Sarah Jones"
+                  className="w-full h-55 sm:h-65 lg:h-75 object-cover object-top"
+                />
+              </div>
+
+              {/* INFO */}
+              <div className="mt-4 flex items-center justify-between">
+                <div>
+                  <h4 className="text-base sm:text-lg lg:text-3xl font-bold text-black">
+                    Sarah Jones
+                  </h4>
+                  <p className="text-sm text-gray-600">Product designer</p>
+                </div>
+
+                <span className="rounded-full bg-blue-500 px-3 py-1 text-xs font-semibold text-white">
+                  Online
+                </span>
+              </div>
             </div>
           </div>
         </section>
 
-        
-
         <section className="pb-20">
-          {/* ================= TOP ROW ================= */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* ================= REVENUE ================= */}
-            <div className="rounded-2xl border border-gray-200 p-6 bg-white">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-lg font-semibold">Revenue</h3>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 ">
 
-                <div className="flex items-center gap-4 text-sm">
-                  <span className="flex items-center gap-1">
+            {/* ================= REVENUE ================= */}
+            {/* <div className="rounded-2xl border border-gray-200 p-6 bg-white">
+              <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <h3 className="text-base sm:text-lg font-semibold">Revenue</h3>
+                <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs sm:text-sm">
+                  <span className="flex items-center gap-1.5">
                     <span className="h-3 w-3 rounded-sm bg-blue-600" />
                     Income
                   </span>
-                  <span className="flex items-center gap-1">
+
+                  <span className="flex items-center gap-1.5">
                     <span className="h-3 w-3 rounded-sm bg-blue-400" />
                     Expenses
                   </span>
-                  <span className="flex items-center gap-1">
+
+                  <span className="flex items-center gap-1.5">
                     <span className="h-3 w-3 rounded-sm bg-blue-800" />
                     Savings
                   </span>
@@ -296,43 +516,192 @@ export default function TailwindColorsPage() {
                   />
                 ))}
               </div>
+            </div> */}
+
+
+            {/* ================= REVENUE ================= */}
+
+            <div className="rounded-2xl border border-gray-200  p-6 flex flex-col bg-white">
+              {/* HEADER */}
+              <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <h3 className="text-base sm:text-lg font-semibold">Revenue</h3>
+
+                <div className="flex items-center gap-4 text-xs sm:text-sm">
+                  <span className="flex items-center gap-1">
+                    <span className="h-3 w-3 bg-blue-600 rounded-sm" />
+                    Income
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <span className="h-3 w-3 bg-blue-400 rounded-sm" />
+                    Expenses
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <span className="h-3 w-3 bg-blue-800 rounded-sm" />
+                    Savings
+                  </span>
+                </div>
+
+
+              </div>
+
+              {/* VALUE */}
+              <div className="mb-8 flex items-center gap-3">
+                <h2 className="text-2xl sm:text-3xl font-bold">$213.000</h2>
+                <span className="rounded-full bg-blue-100 px-3 py-1 text-xs sm:text-sm text-blue-600 font-medium">
+                  +20%
+                </span>
+              </div>
+
+              {/* ===== CHART GRID ===== */}
+              <div className="grid grid-cols-5 gap-4 items-end h-40 md:h-62 ">
+                {[
+                  [80, 45, 65],
+                  [70, 60, 55],
+                  [55, 85, 70],
+                  [65, 55, 45],
+                  [85, 65, 50],
+                ].map((group, i) => (
+                  <div
+                    key={i}
+                    className="flex items-end justify-center gap-1.5 sm:gap-2 h-full"
+                  >
+                    <div
+                      className="w-3 sm:w-4 rounded-t-md bg-blue-600"
+                      style={{ height: `${group[0]}%` }}
+                    />
+                    <div
+                      className="w-3 sm:w-4 rounded-t-md bg-blue-400"
+                      style={{ height: `${group[1]}%` }}
+                    />
+                    <div
+                      className="w-3 sm:w-4 rounded-t-md bg-blue-800"
+                      style={{ height: `${group[2]}%` }}
+                    />
+                  </div>
+                ))}
+              </div>
+
+              {/* BASE LINE */}
+              <div className="  bg-gray-200" />
+
             </div>
+
+
+            
+
+
+
 
             {/* ================= PRICING ================= */}
             <div className="rounded-2xl border border-gray-200 p-6 bg-white">
               <h3 className="text-lg font-semibold mb-6">Pricing plans</h3>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-                {[
-                  { name: "Individual", price: "$0", btn: "Get started" },
-                  { name: "Team", price: "$99", btn: "Get started" },
-                  { name: "Enterprise", price: "$199", btn: "Contact us" },
-                ].map((plan, i) => (
-                  <div
-                    key={i}
-                    className="rounded-xl bg-blue-100 p-6 flex flex-col justify-between"
-                  >
-                    <div>
-                      <p className="font-semibold">{plan.name}</p>
-                      <h4 className="mt-3 text-4xl font-bold">
-                        {plan.price}
-                        <span className="text-sm font-medium text-gray-600">
-                          {" "}
-                          / month
-                        </span>
-                      </h4>
-                      <p className="mt-3 text-sm text-gray-600">
-                        Perfect for growing teams and freelancers.
-                      </p>
-                    </div>
-
-                    <button className="mt-6 rounded-full bg-blue-600 py-2.5 text-white font-semibold hover:bg-blue-700 transition">
-                      {plan.btn}
-                    </button>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                {/* ================= INDIVIDUAL ================= */}
+                <div
+                  className="rounded-2xl border border-[#6EA3FF] bg-gradient-to-br from-[#A6C8FF] via-[#C1DAFF] to-[#DDEBFF] p-6 flex flex-col gap-5"
+                >
+                  {/* Icon */}
+                  <div className="h-10 w-10 rounded-full bg-blue-600/20 flex items-center justify-center">
+                    <Heart
+                      className="text-[#0B57D0]"
+                      size={22}
+                      strokeWidth={2}
+                    />
                   </div>
-                ))}
+
+                  {/* Content */}
+                  <div>
+                    <h4 className="text-lg font-semibold text-black">
+                      Individual
+                    </h4>
+
+                    <p className=" mt-2 text-3xl font-bold">
+                      $0
+                      <span className="ml-1 text-sm font-medium text-gray-600">
+                        per month
+                      </span>
+                    </p>
+
+                    <p className="mt-3 text-sm text-gray-600">
+                      Perfect for freelancers or hobbyists starting out.
+                    </p>
+                  </div>
+
+                  {/* Button */}
+                  <button className="mt-4 rounded-full bg-[#0B57D0] py-2.5 text-white font-semibold hover:bg-[#0949B0] transition">
+                    Get started
+                  </button>
+                </div>
+
+                {/* ================= TEAM ================= */}
+                <div
+                  className="rounded-2xl border border-[#6EA3FF] bg-gradient-to-br from-[#A6C8FF] via-[#C1DAFF] to-[#DDEBFF] p-6   flex flex-col gap-5"
+
+                >
+                  <div className="h-10 w-10 rounded-full bg-blue-600/20 flex items-center justify-center">
+                    <Eye className="text-[#0B57D0]" size={22} strokeWidth={2} />
+                  </div>
+
+                  <div>
+                    <h4 className=" text-lg font-semibold text-black">
+                      Team
+                    </h4>
+
+                    <p className="mt-2 text-3xl font-bold">
+                      $99
+                      <span className="ml-1 text-sm font-medium text-gray-600">
+                        per month
+                      </span>
+                    </p>
+
+                    <p className="mt-3 text-sm text-gray-600">
+                      Ideal for growing teams that need collaboration tools.
+                    </p>
+                  </div>
+
+                  <button className="mt-4 rounded-full bg-[#0B57D0] py-2.5 text-white font-semibold hover:bg-[#0949B0] transition">
+                    Get started
+                  </button>
+                </div>
+
+                {/* ================= ENTERPRISE ================= */}
+                <div
+                  className="rounded-2xl border border-[#6EA3FF] bg-gradient-to-br from-[#A6C8FF] via-[#C1DAFF] to-[#DDEBFF] p-6 flex flex-col gap-5"
+                >
+                  <div className="h-10 w-10 rounded-full bg-blue-600/20 flex items-center justify-center">
+                    <Star
+                      className="text-[#0B57D0]"
+                      size={22}
+                      strokeWidth={2}
+                    />
+                  </div>
+
+                  <div>
+                    <h4 className=" text-lg font-semibold text-black">
+                      Enterprise
+                    </h4>
+
+                    <p className=" mt-2 text-3xl font-bold">
+                      $199
+                      <span className="ml-1 text-sm font-medium text-gray-600">
+                        per month
+                      </span>
+                    </p>
+
+                    <p className="mt-3 text-sm text-gray-600">
+                      Designed for large organizations with custom needs.
+                    </p>
+                  </div>
+
+                  <button className="mt-4 rounded-full bg-[#0B57D0] py-2.5 text-white font-semibold hover:bg-[#0949B0] transition">
+                    Contact us
+                  </button>
+                </div>
               </div>
             </div>
+
+
           </div>
 
           {/* ================= SECOND ROW ================= */}
