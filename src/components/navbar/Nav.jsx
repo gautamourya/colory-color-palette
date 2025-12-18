@@ -145,13 +145,13 @@ export default function Navbar() {
       <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white relative">
         {/* FULL WIDTH CONTAINER */}
         <div className="w-full px-4 md:px-6">
-          <div className="flex h-16 items-center justify-between">
+          <div className="flex h-16 items-center  flex-row-reverse md:flex-row justify-between">
             {/* LOGO — LEFT EDGE */}
             <Link
               href="/"
               className="text-2xl font-black tracking-tight text-blue-600"
             >
-              COOLORS
+              COLORY
             </Link>
 
             {/* RIGHT MENU — RIGHT EDGE */}
@@ -204,13 +204,18 @@ export default function Navbar() {
 
         {toolsOpen && (
           <div className="hidden lg:block">
-            <ToolsMenu open={toolsOpen}/>
+            <ToolsMenu open={toolsOpen} />
           </div>
         )}
       </header>
 
       {/* ================= OVERLAY ================= */}
-
+      {open && (
+        <div
+          className="fixed inset-0 z-40 bg-black/40"
+          onClick={() => setOpen(false)}
+        />
+      )}
       {/* ================= MOBILE DRAWER ================= */}
       <aside
         className={`fixed top-0 left-0 z-50 h-full w-[85%] max-w-sm bg-white transform transition-transform duration-300 ${
@@ -218,9 +223,12 @@ export default function Navbar() {
         }`}
       >
         {/* Drawer Content */}
-        <div className="h-[calc(100%-4rem)] overflow-y-auto  [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden px-6 py-6 space-y-6 ">
+        <div
+          onClick={() => setOpen(false)}
+          className="h-[calc(100%-4rem)] overflow-y-auto  [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden px-6 py-6 space-y-6 "
+        >
           {/* TOOLS */}
-          <div className="space-y-5 text-xl font-semibold">
+          <div className="space-y-5 text-xl font-semibold ">
             <Link href="/" className="block text-cyan-500">
               Palette Generator
             </Link>
