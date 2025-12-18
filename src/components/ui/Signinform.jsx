@@ -1,13 +1,15 @@
-
-
-
 import React, { useState } from "react";
 import Link from "next/link";
 import Signupform from "./Signupform";
+import ResetPassword from "./ResetPassword";
 
 const Signinform = () => {
+  const [showResetPassword, setShowResetPassword] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [showPass, setShowPass] = useState(false);
+
+
+  
 
   return (
     <>
@@ -59,14 +61,21 @@ const Signinform = () => {
           <div className="mt-4 text-sm text-gray-600">
             <p>
               Forgot password?{" "}
-              <Link href="#" className="text-blue-600 hover:underline">
+              <button 
+                onClick={() =>
+                   {setShowForm(true) 
+                    setShowResetPassword(true)}}
+                className="text-blue-600 hover:underline">
                 Reset
-              </Link>
+              </button>
             </p>
             <p className="mt-2">
               Don&apos;t have an account?{" "}
               <button
-                onClick={() => setShowForm(true)}
+                onClick={() =>{
+                  setShowResetPassword(false)
+                   setShowForm(true)
+                }}
                 className="text-blue-600 hover:underline"
               >
                 Sign up
@@ -75,7 +84,7 @@ const Signinform = () => {
           </div>
         </div>
       ) : (
-        <Signupform />
+        showResetPassword ? <ResetPassword  /> : <Signupform />
       )}
     </>
   );

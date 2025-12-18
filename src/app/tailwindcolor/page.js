@@ -477,7 +477,6 @@ export default function TailwindColorsPage() {
 
         <section className="pb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 ">
-
             {/* ================= REVENUE ================= */}
             {/* <div className="rounded-2xl border border-gray-200 p-6 bg-white">
               <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
@@ -518,7 +517,6 @@ export default function TailwindColorsPage() {
               </div>
             </div> */}
 
-
             {/* ================= REVENUE ================= */}
 
             <div className="rounded-2xl border border-gray-200  p-6 flex flex-col bg-white">
@@ -540,8 +538,6 @@ export default function TailwindColorsPage() {
                     Savings
                   </span>
                 </div>
-
-
               </div>
 
               {/* VALUE */}
@@ -583,14 +579,7 @@ export default function TailwindColorsPage() {
 
               {/* BASE LINE */}
               <div className="  bg-gray-200" />
-
             </div>
-
-
-            
-
-
-
 
             {/* ================= PRICING ================= */}
             <div className="rounded-2xl border border-gray-200 p-6 bg-white">
@@ -598,9 +587,7 @@ export default function TailwindColorsPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {/* ================= INDIVIDUAL ================= */}
-                <div
-                  className="rounded-2xl border border-[#6EA3FF] bg-gradient-to-br from-[#A6C8FF] via-[#C1DAFF] to-[#DDEBFF] p-6 flex flex-col gap-5"
-                >
+                <div className="rounded-2xl border border-[#6EA3FF] bg-gradient-to-br from-[#A6C8FF] via-[#C1DAFF] to-[#DDEBFF] p-6 flex flex-col gap-5">
                   {/* Icon */}
                   <div className="h-10 w-10 rounded-full bg-blue-600/20 flex items-center justify-center">
                     <Heart
@@ -635,18 +622,13 @@ export default function TailwindColorsPage() {
                 </div>
 
                 {/* ================= TEAM ================= */}
-                <div
-                  className="rounded-2xl border border-[#6EA3FF] bg-gradient-to-br from-[#A6C8FF] via-[#C1DAFF] to-[#DDEBFF] p-6   flex flex-col gap-5"
-
-                >
+                <div className="rounded-2xl border border-[#6EA3FF] bg-gradient-to-br from-[#A6C8FF] via-[#C1DAFF] to-[#DDEBFF] p-6   flex flex-col gap-5">
                   <div className="h-10 w-10 rounded-full bg-blue-600/20 flex items-center justify-center">
                     <Eye className="text-[#0B57D0]" size={22} strokeWidth={2} />
                   </div>
 
                   <div>
-                    <h4 className=" text-lg font-semibold text-black">
-                      Team
-                    </h4>
+                    <h4 className=" text-lg font-semibold text-black">Team</h4>
 
                     <p className="mt-2 text-3xl font-bold">
                       $99
@@ -666,9 +648,7 @@ export default function TailwindColorsPage() {
                 </div>
 
                 {/* ================= ENTERPRISE ================= */}
-                <div
-                  className="rounded-2xl border border-[#6EA3FF] bg-gradient-to-br from-[#A6C8FF] via-[#C1DAFF] to-[#DDEBFF] p-6 flex flex-col gap-5"
-                >
+                <div className="rounded-2xl border border-[#6EA3FF] bg-gradient-to-br from-[#A6C8FF] via-[#C1DAFF] to-[#DDEBFF] p-6 flex flex-col gap-5">
                   <div className="h-10 w-10 rounded-full bg-blue-600/20 flex items-center justify-center">
                     <Star
                       className="text-[#0B57D0]"
@@ -700,16 +680,18 @@ export default function TailwindColorsPage() {
                 </div>
               </div>
             </div>
-
-
           </div>
 
           {/* ================= SECOND ROW ================= */}
           <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* ================= TICKETS ================= */}
-            <div className="rounded-2xl border border-gray-200 bg-white">
-              <h3 className="p-6 text-lg font-semibold border-b">Tickets</h3>
+            <div className="rounded-2xl border border-gray-200 bg-white overflow-hidden">
+              {/* Header */}
+              <div className="px-6 py-4 border-b">
+                <h3 className="text-lg font-semibold">Tickets</h3>
+              </div>
 
+              {/* List */}
               <div className="divide-y">
                 {[
                   { name: "Amy P.", status: "Open", time: "1 hrs" },
@@ -719,18 +701,46 @@ export default function TailwindColorsPage() {
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className="flex items-center justify-between px-6 py-4"
+                    className="
+          px-4 sm:px-6 py-4
+          flex items-center justify-between
+          gap-4
+        "
                   >
-                    <div className="flex items-center gap-3">
-                      <div className="h-10 w-10 rounded-full bg-gray-300" />
-                      <p className="font-medium">{item.name}</p>
+                    {/* LEFT : Avatar + Name */}
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="h-10 w-10 rounded-full bg-gray-300 shrink-0" />
+                      <p className="font-medium text-sm sm:text-base truncate">
+                        {item.name}
+                      </p>
                     </div>
 
-                    <div className="flex items-center gap-6 text-sm">
-                      <span className="rounded-full bg-blue-100 px-3 py-1 text-blue-600">
+                    {/* RIGHT : Status + Time + Menu */}
+                    <div className="flex items-center gap-4 sm:gap-6 text-sm shrink-0">
+                      {/* Status */}
+                      <span
+                        className="
+              rounded-full
+              bg-blue-100
+              px-3 py-1
+              text-xs sm:text-sm
+              text-blue-600
+              font-medium
+              whitespace-nowrap
+            "
+                      >
                         {item.status}
                       </span>
-                      <span className="text-gray-500">{item.time}</span>
+
+                      {/* Time */}
+                      <span className="text-gray-500 text-xs sm:text-sm whitespace-nowrap">
+                        {item.time}
+                      </span>
+
+                      {/* Dots */}
+                      <button className="text-gray-400 hover:text-gray-600 text-lg leading-none">
+                        …
+                      </button>
                     </div>
                   </div>
                 ))}
@@ -792,334 +802,3 @@ export default function TailwindColorsPage() {
     </main>
   );
 }
-
-// "use client"
-
-// import React, { useState } from 'react';
-// import { Copy, Check, Plus, Minus, ChevronDown, Menu, X } from 'lucide-react';
-
-// export default function TailwindColorsUI() {
-//   const [copied, setCopied] = useState(false);
-//   const [selectedShade, setSelectedShade] = useState(500);
-//   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-//   const shades = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950];
-//   const colors = {
-//     50: '#eff6ff',
-//     100: '#dbeafe',
-//     200: '#bfdbfe',
-//     300: '#93c5fd',
-//     400: '#60a5fa',
-//     500: '#3b82f6',
-//     600: '#2563eb',
-//     700: '#1d4ed8',
-//     800: '#1e40af',
-//     900: '#1e3a8a',
-//     950: '#172554'
-//   };
-
-//   const handleCopy = (color) => {
-//     navigator.clipboard.writeText(color);
-//     setCopied(true);
-//     setTimeout(() => setCopied(false), 2000);
-//   };
-
-//   return (
-//     <div className="min-h-screen bg-white">
-//       {/* Header */}
-//       <header className="border-b border-gray-200 px-4 md:px-6 lg:px-8 py-4">
-//         <div className="max-w-7xl mx-auto flex items-center justify-between">
-//           <div>
-//             <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Tailwind Colors</h1>
-//             <p className="text-sm text-gray-600 mt-1">Create, preview and export your Tailwind CSS palette</p>
-//           </div>
-//           <div className="hidden md:flex items-center gap-3">
-//             <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" alt="User" className="w-10 h-10 rounded-lg" />
-//             <div className="text-sm">
-//               <div className="font-medium">First pick a color...</div>
-//               <div className="text-gray-600">then name it</div>
-//             </div>
-//           </div>
-//           <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-//             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-//           </button>
-//         </div>
-//       </header>
-
-//       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-6 md:py-8">
-//         {/* Color Palette Selector */}
-//         <div className="mb-8">
-//           <div className="flex items-center justify-between mb-4">
-//             <h2 className="text-base md:text-lg font-semibold flex items-center gap-2">
-//               Palette 1 <span className="text-blue-600">(Digital Blue)</span>
-//             </h2>
-//             <div className="flex items-center gap-2">
-//               <button className="px-3 py-1.5 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700">Light</button>
-//               <button className="px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">Dark</button>
-//             </div>
-//           </div>
-
-//           <div className="grid grid-cols-5 md:grid-cols-11 gap-2 md:gap-3">
-//             {shades.map((shade) => (
-//               <div key={shade} className="flex flex-col items-center">
-//                 <div
-//                   className="w-full aspect-square rounded-lg cursor-pointer transition-transform hover:scale-105"
-//                   style={{ backgroundColor: colors[shade] }}
-//                   onClick={() => setSelectedShade(shade)}
-//                 />
-//                 <span className="text-xs mt-1 text-gray-600">{shade}</span>
-//               </div>
-//             ))}
-//           </div>
-
-//           <div className="mt-4 flex flex-col md:flex-row gap-3">
-//             <div className="flex-1 bg-blue-600 rounded-lg px-4 py-2 flex items-center justify-between">
-//               <span className="text-white text-sm">{colors[selectedShade]}</span>
-//               <button onClick={() => handleCopy(colors[selectedShade])} className="text-white hover:text-blue-100">
-//                 {copied ? <Check size={18} /> : <Copy size={18} />}
-//               </button>
-//             </div>
-//             <div className="flex gap-2">
-//               <button className="p-2 bg-gray-100 rounded-lg hover:bg-gray-200">
-//                 <ChevronDown size={20} />
-//               </button>
-//               <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm flex items-center gap-2">
-//                 <Plus size={18} /> Generate
-//               </button>
-//               <button className="px-4 py-2 bg-gray-100 rounded-lg hover:bg-gray-200 text-sm flex items-center gap-2">
-//                 <Minus size={18} /> Explore
-//               </button>
-//               <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm">Export</button>
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* Main Grid Layout */}
-//         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-//           {/* Left Column */}
-//           <div className="space-y-6">
-//             {/* Revenue Card */}
-//             <div className="bg-blue-50 rounded-xl p-6">
-//               <div className="flex items-start justify-between mb-4">
-//                 <div className="bg-white p-3 rounded-lg">
-//                   <div className="text-3xl">📈</div>
-//                 </div>
-//               </div>
-//               <h3 className="text-xl font-bold mb-2">Increase your revenue by 3x</h3>
-//               <p className="text-sm text-gray-600 mb-4">Our platform helps you close more deals and scale for that goals</p>
-//               <button className="w-full bg-blue-600 text-white py-2.5 rounded-lg hover:bg-blue-700 font-medium">Start growing</button>
-//             </div>
-
-//             {/* Categories */}
-//             <div>
-//               <h3 className="font-semibold mb-3">Categories</h3>
-//               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 gap-3">
-//                 {['Design', 'Analyze', 'Team', 'Gift', 'Pay', 'Purchase', 'Settings', 'Report'].map((cat, i) => (
-//                   <div key={i} className="bg-blue-50 p-4 rounded-lg text-center">
-//                     <div className="w-10 h-10 bg-blue-600 rounded-full mx-auto mb-2 flex items-center justify-center text-white">
-//                       {cat[0]}
-//                     </div>
-//                     <span className="text-sm font-medium">{cat}</span>
-//                   </div>
-//                 ))}
-//               </div>
-//             </div>
-
-//             {/* Newsletter */}
-//             <div className="bg-blue-50 rounded-xl p-6">
-//               <h3 className="font-semibold mb-4">Newsletter</h3>
-//               <p className="text-sm text-gray-600 mb-4">Last message sent an: 18h ago</p>
-//               <div className="space-y-3">
-//                 <div className="bg-white p-4 rounded-lg flex items-center justify-between">
-//                   <div>
-//                     <div className="font-medium text-sm">Existing customers</div>
-//                     <div className="text-xs text-gray-500">Last message sent 5 weeks ago</div>
-//                   </div>
-//                   <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs">
-//                     ?
-//                   </div>
-//                 </div>
-//                 <div className="bg-white p-4 rounded-lg">
-//                   <div className="font-medium text-sm">Trial users</div>
-//                   <div className="text-xs text-gray-500">Last message sent 6 days ago</div>
-//                 </div>
-//               </div>
-//             </div>
-
-//             {/* Revenue Chart */}
-//             <div>
-//               <h3 className="font-semibold mb-3">Revenue</h3>
-//               <div className="bg-white rounded-xl p-4 border border-gray-200">
-//                 <div className="flex items-center gap-4 mb-4">
-//                   <div className="text-2xl font-bold">$213,000</div>
-//                   <span className="px-2 py-1 bg-blue-100 text-blue-600 text-xs rounded">+12%</span>
-//                 </div>
-//                 <div className="flex items-end gap-1.5 h-32">
-//                   {[60, 80, 45, 90, 55, 75, 40, 95, 65, 85, 50].map((h, i) => (
-//                     <div key={i} className="flex-1 bg-blue-600 rounded-t" style={{height: `${h}%`}} />
-//                   ))}
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-
-//           {/* Middle Column */}
-//           <div className="space-y-6">
-//             {/* Stats Cards */}
-//             <div className="grid grid-cols-3 gap-3">
-//               {[
-//                 { label: 'Applications', value: '43' },
-//                 { label: 'Shortlisted', value: '12' },
-//                 { label: 'On Hold', value: '21' }
-//               ].map((stat, i) => (
-//                 <div key={i} className="bg-blue-600 text-white p-4 rounded-xl">
-//                   <div className="text-xs mb-1">{stat.label}</div>
-//                   <div className="text-2xl font-bold">{stat.value}</div>
-//                 </div>
-//               ))}
-//             </div>
-
-//             {/* Progress Bars */}
-//             <div className="space-y-4">
-//               {[
-//                 { name: 'UI/UX', progress: 80, amount: '$4,200' },
-//                 { name: 'Education & Courses', progress: 65, amount: '$45,000' },
-//                 { name: 'Health & Wellness', progress: 40, amount: '$3,200' }
-//               ].map((item, i) => (
-//                 <div key={i} className="bg-blue-50 p-4 rounded-xl">
-//                   <div className="flex items-center justify-between mb-2">
-//                     <div>
-//                       <div className="font-medium text-sm">{item.name}</div>
-//                       <div className="text-xs text-gray-500">40%</div>
-//                     </div>
-//                     <div className="font-bold">{item.amount}</div>
-//                   </div>
-//                   <div className="bg-white rounded-full h-2">
-//                     <div className="bg-blue-600 h-2 rounded-full" style={{width: `${item.progress}%`}} />
-//                   </div>
-//                 </div>
-//               ))}
-//             </div>
-
-//             {/* Schedule */}
-//             <div>
-//               <h3 className="font-semibold mb-3">Schedule</h3>
-//               <div className="space-y-3">
-//                 {[
-//                   { time: '9-15', title: 'Weekly Team Sync', desc: 'Quick standup to align and...' },
-//                   { time: '4:00', title: 'Client Rev Internal', desc: 'Our design review is syste...' },
-//                   { time: '7:30', title: 'Product Design Review', desc: 'Quick standup to align and...' }
-//                 ].map((event, i) => (
-//                   <div key={i} className="flex gap-3">
-//                     <div className="bg-blue-600 text-white rounded-lg px-3 py-2 text-center min-w-[60px]">
-//                       <div className="text-lg font-bold">{event.time}</div>
-//                     </div>
-//                     <div className="flex-1 bg-blue-50 p-3 rounded-lg">
-//                       <div className="font-medium text-sm">{event.title}</div>
-//                       <div className="text-xs text-gray-600">{event.desc}</div>
-//                     </div>
-//                   </div>
-//                 ))}
-//               </div>
-//             </div>
-
-//             {/* Profile Card */}
-//             <div className="bg-blue-50 rounded-xl p-6 text-center">
-//               <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop" alt="Sarah" className="w-24 h-24 rounded-xl mx-auto mb-3" />
-//               <h3 className="font-bold">Sarah Jones</h3>
-//               <p className="text-sm text-gray-600 mb-3">Product Manager</p>
-//               <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm">Follow</button>
-//             </div>
-//           </div>
-
-//           {/* Right Column */}
-//           <div className="space-y-6">
-//             {/* Pricing Cards */}
-//             <div>
-//               <h3 className="font-semibold mb-3">Pricing plans</h3>
-//               <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-4">
-//                 {[
-//                   { name: 'Individual', price: '$0', desc: 'For small teams...' },
-//                   { name: 'Team', price: '$99', desc: 'For growing teams...' },
-//                   { name: 'Enterprise', price: '$199', desc: 'For large teams...' }
-//                 ].map((plan, i) => (
-//                   <div key={i} className="bg-blue-50 p-6 rounded-xl">
-//                     <div className="text-xs text-gray-600 mb-1">{plan.name}</div>
-//                     <div className="text-3xl font-bold mb-1">{plan.price}</div>
-//                     <div className="text-xs text-gray-600 mb-4">per month</div>
-//                     <p className="text-xs text-gray-600 mb-4">{plan.desc}</p>
-//                     <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 text-sm">Get started</button>
-//                   </div>
-//                 ))}
-//               </div>
-//             </div>
-
-//             {/* Team List */}
-//             <div>
-//               <h3 className="font-semibold mb-3">Teams</h3>
-//               <div className="space-y-3">
-//                 {[
-//                   { name: 'Amy P.', role: 'Team', time: '11m' },
-//                   { name: 'Sahil A.', role: 'Team', time: '30 mins' },
-//                   { name: 'Seraya P.', role: 'Marketing', time: '1h' },
-//                   { name: 'Jason A.', role: 'Sales', time: '2 days' }
-//                 ].map((member, i) => (
-//                   <div key={i} className="flex items-center gap-3 bg-blue-50 p-3 rounded-lg">
-//                     <div className="w-10 h-10 bg-blue-600 rounded-full" />
-//                     <div className="flex-1">
-//                       <div className="font-medium text-sm">{member.name}</div>
-//                       <span className="text-xs px-2 py-0.5 bg-blue-600 text-white rounded">{member.role}</span>
-//                     </div>
-//                     <div className="text-xs text-gray-600">{member.time}</div>
-//                   </div>
-//                 ))}
-//               </div>
-//             </div>
-
-//             {/* Image Grid */}
-//             <div>
-//               <h3 className="font-semibold mb-3">Continue Watching</h3>
-//               <div className="grid grid-cols-3 gap-3">
-//                 {[1,2,3].map((i) => (
-//                   <div key={i} className="space-y-2">
-//                     <img src={`https://images.unsplash.com/photo-${1500000000000 + i}?w=300&h=200&fit=crop`} alt="" className="w-full aspect-video rounded-lg object-cover" />
-//                     <div className="text-xs font-medium">Video {i}</div>
-//                     <div className="text-xs text-gray-600">Description here</div>
-//                   </div>
-//                 ))}
-//               </div>
-//             </div>
-
-//             {/* Stats */}
-//             <div className="grid grid-cols-3 gap-4">
-//               {[
-//                 { label: 'Total Subscribers', value: '71,842', change: '+5%' },
-//                 { label: 'Avg. Open Rate', value: '58.16%', change: '-2.1%' },
-//                 { label: 'Avg. Click Rate', value: '24.57%', change: '+8.3%' }
-//               ].map((stat, i) => (
-//                 <div key={i} className="bg-blue-50 p-4 rounded-xl">
-//                   <div className="text-xs text-gray-600 mb-1">{stat.label}</div>
-//                   <div className="text-xl font-bold mb-1">{stat.value}</div>
-//                   <span className={`text-xs px-2 py-0.5 rounded ${stat.change.startsWith('+') ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'}`}>
-//                     {stat.change}
-//                   </span>
-//                 </div>
-//               ))}
-//             </div>
-
-//             {/* Feature Cards */}
-//             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-4">
-//               {['Manage team', 'Notification settings', 'Download reports'].map((feature, i) => (
-//                 <div key={i} className={`p-6 rounded-xl text-white ${i === 2 ? 'bg-blue-600' : i === 1 ? 'bg-blue-500' : 'bg-blue-400'}`}>
-//                   <div className="w-10 h-10 bg-white bg-opacity-20 rounded-full mb-3" />
-//                   <h4 className="font-bold mb-2">{feature}</h4>
-//                   <p className="text-sm opacity-90">Collaborate with your teammates and improve workflows</p>
-//                 </div>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
