@@ -98,10 +98,10 @@ export default function TailwindColorsPage() {
             <div className="rounded-2xl bg-[#CCE0FF] p-6 flex flex-col justify-between">
               <div>
                 <div className="text-3xl mb-4">✨</div>
-                <h3 className="text-2xl font-bold text-black">
+                <h3 className="text-2xl lg:text-3xl font-bold text-black">
                   Increase your revenue by 3x
                 </h3>
-                <p className="mt-3 text-sm text-gray-700">
+                <p className="mt-3 lg:text-md text-black">
                   Our platform helps you close more deals and scale faster than
                   ever.
                 </p>
