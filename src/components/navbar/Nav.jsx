@@ -133,14 +133,16 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
+import ToolsMenu from "../navbar/ToolsMenu";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [toolsOpen, setToolsOpen] = useState(false);
 
   return (
     <>
       {/* ================= NAVBAR ================= */}
-      <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white">
+      <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white relative">
         {/* FULL WIDTH CONTAINER */}
         <div className="w-full px-4 md:px-6">
           <div className="flex h-16 items-center justify-between">
@@ -154,8 +156,17 @@ export default function Navbar() {
 
             {/* RIGHT MENU — RIGHT EDGE */}
             <nav className="hidden md:flex items-center gap-2">
-              <button className="flex items-center gap-1 rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100">
-                Tools <ChevronDown size={16} />
+              <button
+                onClick={() => setToolsOpen(!toolsOpen)}
+                className="hidden lg:flex items-center gap-1 rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100"
+              >
+                Tools{" "}
+                <ChevronDown
+                  size={16}
+                  className={`transition-transform duration-200 ${
+                    toolsOpen ? "rotate-180" : ""
+                  }`}
+                />
               </button>
 
               <Link
@@ -166,14 +177,14 @@ export default function Navbar() {
               </Link>
 
               <Link
-                href="/signin"
+                href="/auth"
                 className="rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100 transition"
               >
                 Sign in
               </Link>
 
               <Link
-                href="/signup"
+                href="/auth"
                 className="ml-1 rounded-md bg-blue-600 px-4 py-2 text-base font-semibold text-white hover:bg-blue-700 transition"
               >
                 Sign up
@@ -190,15 +201,15 @@ export default function Navbar() {
             </button>
           </div>
         </div>
+
+        {toolsOpen && (
+          <div className="hidden lg:block">
+            <ToolsMenu open={toolsOpen}/>
+          </div>
+        )}
       </header>
 
       {/* ================= OVERLAY ================= */}
-      {open && (
-        <div
-          className="fixed inset-0 z-40 bg-black/40"
-          onClick={() => setOpen(false)}
-        />
-      )}
 
       {/* ================= MOBILE DRAWER ================= */}
       <aside
@@ -206,14 +217,8 @@ export default function Navbar() {
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        {/*         
-        <div className="flex h-16 items-center border-b px-6">
-          <span className="text-xl font-black text-blue-600">COOLORS</span>
-        </div> */}
-
         {/* Drawer Content */}
-        <div
-          className="h-[calc(100%-4rem)] overflow-y-auto  [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden px-6 py-6 space-y-6 ">
+        <div className="h-[calc(100%-4rem)] overflow-y-auto  [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden px-6 py-6 space-y-6 ">
           {/* TOOLS */}
           <div className="space-y-5 text-xl font-semibold">
             <Link href="/" className="block text-cyan-500">

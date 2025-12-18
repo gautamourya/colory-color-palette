@@ -72,7 +72,7 @@ export default function SignUpExact() {
           Already have an account?{" "}
           <Link
           onClick={()=>setShowForm(true)}
-          href="/signin" className="text-blue-600 hover:underline">
+          href="/auth" className="text-blue-600 hover:underline">
             Sign in
           </Link>
         </p>
