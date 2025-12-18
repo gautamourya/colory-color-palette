@@ -23,6 +23,30 @@
 
 
 
-/* body {
-  font-family: Arial, Helvetica, sans-serif;
-} */
+
+
+/* .animated-gradient {
+  background:
+  radial-gradient(circle at 35% 60%, #a855f7 0%, transparent 45%),
+  radial-gradient(circle at 10% 25%, #22d3ee 0%, transparent 45%),
+  radial-gradient(circle at 55% 30%, #ec4899 0%, transparent 45%),
+  radial-gradient(circle at 75% 65%, #fde047 0%, transparent 45%),
+  radial-gradient(circle at 85% 25%, #fb923c 0%, transparent 45%),
+    radial-gradient(circle at 85% 85%, #84cc16 0%, transparent 45%);
+
+  background-size: 160% 160%;
+  animation: gradientDrift 30s ease-in-out infinite alternate;
+}
+
+/* Entire gradient moves together (like your image) */
+/* @keyframes gradientDrift {
+  0% {
+    transform: translate(0%, 0%) scale(1);
+  }
+  50% {
+    transform: translate(-8%, -6%) scale(1.05);
+  }
+  100% {
+    transform: translate(6%, 8%) scale(1);
+  }
+} */ 
