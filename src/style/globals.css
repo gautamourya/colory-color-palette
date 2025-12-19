@@ -3,6 +3,9 @@
 :root {
   --hover-gray: #F0F0F0;
   --hover-blue: #1D4ED8;
+  --text-blue:#155DFC;
+  --text-black:#000000;
+  --bg-blue:#2563EB;
 }
 
 @theme inline {
@@ -12,6 +15,9 @@
   --font-mono: var(--font-geist-mono);
   --color-hover-gray: var(--hover-gray);
   --color-hover-blue: var(--hover-blue);
+  --color-text-blue: var(--text-blue);
+  --color-text-black: var(--text-black);
+  --color-bg-blue: var(--bg-blue);
 }
 
 

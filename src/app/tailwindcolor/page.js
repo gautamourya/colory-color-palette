@@ -17,7 +17,7 @@ import {
 export default function TailwindColorsPage() {
   return (
     <main className="w-full bg-white">
-      <div className="mx-auto max-w-[1450px] px-4 sm:px-6 lg:px-10">
+      <div className="mx-auto max-w-362.5 px-4 sm:px-6 lg:px-10">
         {/* ================= HEADER ================= */}
         <section className="pt-8 pb-10">
           <div className="grid gap-6 lg:grid-cols-[1fr_340px] items-start lg:pt-25">
@@ -31,25 +31,6 @@ export default function TailwindColorsPage() {
                 Create, preview and export your Tailwind CSS palette
               </p>
             </div>
-
-            {/* SHOPIFY AD */}
-            {/* <div className="rounded-xl border border-gray-200 bg-white p-4">
-              <div className="flex gap-4">
-                <div className="h-16 w-16 rounded-lg bg-black shrink-0" />
-                <div>
-                  <p className="font-semibold text-gray-900">
-                    Shopify
-                  </p>
-                  <p className="mt-1 text-sm text-gray-600 leading-snug">
-                    Turn your ideas into business. Start for free then pay{" "}
-                    <span className="font-medium">$1/month</span> for 3 months.
-                  </p>
-                  <p className="mt-1 text-xs text-gray-400">
-                    ads via Carbon
-                  </p>
-                </div>
-              </div>
-            </div> */}
           </div>
         </section>
 
@@ -86,7 +67,7 @@ export default function TailwindColorsPage() {
             ].map(([shade, hex]) => (
               <div
                 key={shade}
-                className="rounded-md h-[110px] sm:h-[120px] lg:h-[110px] p-3 flex flex-col justify-between"
+                className="rounded-md h-[110px] sm:h-[120px] lg:h-[110px] p-3 border border-gray-200 flex flex-col justify-between"
                 style={{ backgroundColor: hex }}
               >
                 {/* Shade number – top right */}
@@ -478,46 +459,6 @@ export default function TailwindColorsPage() {
         <section className="pb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 ">
             {/* ================= REVENUE ================= */}
-            {/* <div className="rounded-2xl border border-gray-200 p-6 bg-white">
-              <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                <h3 className="text-base sm:text-lg font-semibold">Revenue</h3>
-                <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs sm:text-sm">
-                  <span className="flex items-center gap-1.5">
-                    <span className="h-3 w-3 rounded-sm bg-blue-600" />
-                    Income
-                  </span>
-
-                  <span className="flex items-center gap-1.5">
-                    <span className="h-3 w-3 rounded-sm bg-blue-400" />
-                    Expenses
-                  </span>
-
-                  <span className="flex items-center gap-1.5">
-                    <span className="h-3 w-3 rounded-sm bg-blue-800" />
-                    Savings
-                  </span>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4 mb-8">
-                <h2 className="text-3xl font-bold">$213.000</h2>
-                <span className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-600 font-medium">
-                  +20%
-                </span>
-              </div>
-
-              <div className="flex items-end gap-3 h-36">
-                {[70, 45, 60, 80, 55, 65, 50].map((h, i) => (
-                  <div
-                    key={i}
-                    className="flex-1 rounded-md bg-blue-600"
-                    style={{ height: `${h}%` }}
-                  />
-                ))}
-              </div>
-            </div> */}
-
-            {/* ================= REVENUE ================= */}
 
             <div className="rounded-2xl border border-gray-200  p-6 flex flex-col bg-white">
               {/* HEADER */}
@@ -543,7 +484,7 @@ export default function TailwindColorsPage() {
               {/* VALUE */}
               <div className="mb-8 flex items-center gap-3">
                 <h2 className="text-2xl sm:text-3xl font-bold">$213.000</h2>
-                <span className="rounded-full bg-blue-100 px-3 py-1 text-xs sm:text-sm text-blue-600 font-medium">
+                <span className="rounded-full border border-blue-300 bg-blue-100 px-3 py-1 text-xs sm:text-sm text-blue-600 font-medium">
                   +20%
                 </span>
               </div>
@@ -578,7 +519,7 @@ export default function TailwindColorsPage() {
               </div>
 
               {/* BASE LINE */}
-              <div className="  bg-gray-200" />
+              <div className=" border-t border-gray-200" />
             </div>
 
             {/* ================= PRICING ================= */}
@@ -587,7 +528,7 @@ export default function TailwindColorsPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {/* ================= INDIVIDUAL ================= */}
-                <div className="rounded-2xl border border-[#6EA3FF] bg-gradient-to-br from-[#A6C8FF] via-[#C1DAFF] to-[#DDEBFF] p-6 flex flex-col gap-5">
+                <div className="rounded-2xl border border-[#6EA3FF] bg-linear-to-br from-[#A6C8FF] via-[#C1DAFF] to-[#DDEBFF] p-6 flex flex-col gap-5">
                   {/* Icon */}
                   <div className="h-10 w-10 rounded-full bg-blue-600/20 flex items-center justify-center">
                     <Heart
@@ -622,7 +563,7 @@ export default function TailwindColorsPage() {
                 </div>
 
                 {/* ================= TEAM ================= */}
-                <div className="rounded-2xl border border-[#6EA3FF] bg-gradient-to-br from-[#A6C8FF] via-[#C1DAFF] to-[#DDEBFF] p-6   flex flex-col gap-5">
+                <div className="rounded-2xl border border-[#6EA3FF] bg-linear-to-br from-[#A6C8FF] via-[#C1DAFF] to-[#DDEBFF] p-6   flex flex-col gap-5">
                   <div className="h-10 w-10 rounded-full bg-blue-600/20 flex items-center justify-center">
                     <Eye className="text-[#0B57D0]" size={22} strokeWidth={2} />
                   </div>
@@ -648,7 +589,7 @@ export default function TailwindColorsPage() {
                 </div>
 
                 {/* ================= ENTERPRISE ================= */}
-                <div className="rounded-2xl border border-[#6EA3FF] bg-gradient-to-br from-[#A6C8FF] via-[#C1DAFF] to-[#DDEBFF] p-6 flex flex-col gap-5">
+                <div className="rounded-2xl border border-[#6EA3FF] bg-linear-to-br from-[#A6C8FF] via-[#C1DAFF] to-[#DDEBFF] p-6 flex flex-col gap-5">
                   <div className="h-10 w-10 rounded-full bg-blue-600/20 flex items-center justify-center">
                     <Star
                       className="text-[#0B57D0]"
@@ -683,119 +624,425 @@ export default function TailwindColorsPage() {
           </div>
 
           {/* ================= SECOND ROW ================= */}
-          <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+
+
+          <div className="mt-8 grid grid-cols-1 lg:grid-cols-[1.5fr_3fr]  gap-6 ">
             {/* ================= TICKETS ================= */}
-            <div className="rounded-2xl border border-gray-200 bg-white overflow-hidden">
+
+            <div className="rounded-2xl border border-gray-200  overflow-hidden bg-white">
               {/* Header */}
-              <div className="px-6 py-4 border-b">
-                <h3 className="text-lg font-semibold">Tickets</h3>
+              <div className="px-6 py-4 border-b border-gray-200 ">
+                <h3 className="text-lg font-semibold  px-4 py-3 ">Tickets</h3>
               </div>
 
-              {/* List */}
-              <div className="divide-y">
-                {[
-                  { name: "Amy P.", status: "Open", time: "1 hrs" },
-                  { name: "Sarah A.", status: "Open", time: "20 mins" },
-                  { name: "Jessica P.", status: "Processing", time: "45 mins" },
-                  { name: "James A.", status: "Closed", time: "2 days" },
-                ].map((item, i) => (
-                  <div
-                    key={i}
-                    className="
-          px-4 sm:px-6 py-4
-          flex items-center justify-between
-          gap-4
-        "
-                  >
-                    {/* LEFT : Avatar + Name */}
-                    <div className="flex items-center gap-3 min-w-0">
-                      <div className="h-10 w-10 rounded-full bg-gray-300 shrink-0" />
-                      <p className="font-medium text-sm sm:text-base truncate">
-                        {item.name}
-                      </p>
-                    </div>
+              {/* ================= ROW ================= */}
+              <div className="border-b border-gray-200 px-4 py-5 ">
 
-                    {/* RIGHT : Status + Time + Menu */}
-                    <div className="flex items-center gap-4 sm:gap-6 text-sm shrink-0">
-                      {/* Status */}
-                      <span
-                        className="
-              rounded-full
-              bg-blue-100
-              px-3 py-1
-              text-xs sm:text-sm
-              text-blue-600
-              font-medium
-              whitespace-nowrap
-            "
-                      >
-                        {item.status}
-                      </span>
-
-                      {/* Time */}
-                      <span className="text-gray-500 text-xs sm:text-sm whitespace-nowrap">
-                        {item.time}
-                      </span>
-
-                      {/* Dots */}
-                      <button className="text-gray-400 hover:text-gray-600 text-lg leading-none">
-                        …
-                      </button>
-                    </div>
+                <div className="flex  flex-row items-center  justify-between gap-3">
+                
+                  <div className="flex items-center gap-3">
+                    <img
+                      src="https://randomuser.me/api/portraits/women/44.jpg"
+                      className="h-10 w-10 rounded-full object-cover"
+                    />
+                    <span className="font-medium">Amy P.</span>
                   </div>
-                ))}
+
+                 
+               
+                    <div className="rounded-full bg-blue-100 px-3 py-1 text-xs text-blue-600 font-medium">
+                      Open
+                    </div>
+
+                    <div className="text-xs text-gray-500">1 hrs</div>
+
+                    <div className="text-gray-400 text-lg ">…</div>
+                  
+
+
+                </div>
+              </div>
+
+              {/* ================= ROW ================= */}
+            <div className="border-b border-gray-200 px-4 py-5 ">
+
+                <div className="flex  flex-row items-center  justify-between gap-3">
+                
+                  <div className="flex items-center gap-3">
+                    <img
+                      src="https://randomuser.me/api/portraits/women/44.jpg"
+                      className="h-10 w-10 rounded-full object-cover"
+                    />
+                    <span className="font-medium">Amy P.</span>
+                  </div>
+
+                 
+               
+                    <div className="rounded-full bg-blue-100 px-3 py-1 text-xs text-blue-600 font-medium">
+                      Open
+                    </div>
+
+                    <div className="text-xs text-gray-500">1 hrs</div>
+
+                    <div className="text-gray-400 text-lg ">…</div>
+                  
+
+
+                </div>
+              </div>
+
+              {/* ================= ROW ================= */}
+            <div className="border-b border-gray-200 px-4 py-5 ">
+
+                <div className="flex  flex-row items-center  justify-between gap-3">
+                
+                  <div className="flex items-center gap-3">
+                    <img
+                      src="https://randomuser.me/api/portraits/women/44.jpg"
+                      className="h-10 w-10 rounded-full object-cover"
+                    />
+                    <span className="font-medium">Amy P.</span>
+                  </div>
+
+                 
+               
+                    <div className="rounded-full bg-blue-100 px-3 py-1 text-xs text-blue-600 font-medium">
+                      Open
+                    </div>
+
+                    <div className="text-xs text-gray-500">1 hrs</div>
+
+                    <div className="text-gray-400 text-lg ">…</div>
+                  
+
+
+                </div>
+              </div>
+
+              {/* ================= ROW ================= */}
+                <div className=" px-4  py-5 ">
+
+                <div className="flex  flex-row items-center  justify-between gap-3">
+                
+                  <div className="flex items-center gap-3">
+                    <img
+                      src="https://randomuser.me/api/portraits/women/44.jpg"
+                      className="h-10 w-10 rounded-full object-cover"
+                    />
+                    <span className="font-medium">Amy P.</span>
+                  </div>
+
+                 
+               
+                    <div className="rounded-full bg-blue-100 px-3 py-1 text-xs text-blue-600 font-medium">
+                      Open
+                    </div>
+
+                    <div className="text-xs text-gray-500">1 hrs</div>
+
+                    <div className="text-gray-400 text-lg ">…</div>
+                  
+
+
+                </div>
               </div>
             </div>
 
+
+
+
+
             {/* ================= CONTINUE WATCHING ================= */}
-            <div className="rounded-2xl border border-gray-200 p-6 bg-white">
+            <div className="rounded-2xl border border-gray-200  bg-white p-6">
               <h3 className="text-lg font-semibold mb-6">Continue Watching</h3>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                {["UI / UX", "Front End Dev", "Sound Effects"].map((tag, i) => (
-                  <div key={i}>
-                    <div className="h-32 rounded-xl bg-gray-300 mb-3" />
+              {/* MOBILE: horizontal scroll | DESKTOP: grid */}
+              <div className="flex gap-4 overflow-x-auto md:grid md:grid-cols-3 md:gap-6 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                {/* ================= CARD 1 ================= */}
+                <div className="flex flex-col min-w-65 sm:min-w-70 md:min-w-0">
+                  <img
+                    src="https://images.unsplash.com/photo-1581090700227-1e37b190418e"
+                    alt="UI UX"
+                    className="h-40 w-full rounded-xl object-cover mb-3"
+                  />
 
-                    <span className="inline-block mb-2 rounded-full bg-blue-100 px-3 py-1 text-xs text-blue-600">
-                      {tag}
-                    </span>
+                  <span className="mb-2 w-fit rounded-full border border-blue-300 bg-blue-100 px-3 py-1 text-xs font-medium text-(--color-text-blue)">
+                    UI / UX
+                  </span>
 
-                    <p className="text-sm font-medium">
-                      Design principles and tools for intuitive user interfaces.
-                    </p>
+                  <p className="text-sm font-medium mb-4">
+                    Design principles and tools for creating intuitive user
+                    interfaces.
+                  </p>
 
-                    <div className="mt-4 h-1 w-full rounded-full bg-gray-200">
-                      <div className="h-full w-2/3 rounded-full bg-blue-600" />
-                    </div>
+                  <div className="h-1.5 w-full rounded-full bg-gray-200 mb-4">
+                    <div className="h-full w-[70%] rounded-full bg-bg-blue" />
+                  </div>
 
-                    <div className="mt-4 flex items-center gap-2">
-                      <div className="h-8 w-8 rounded-full bg-gray-300" />
-                      <span className="text-sm text-gray-600">Mentor</span>
+                  <div className="flex items-center gap-3">
+                    <img
+                      src="https://randomuser.me/api/portraits/men/32.jpg"
+                      className="h-9 w-9 rounded-full object-cover"
+                    />
+                    <div>
+                      <p className="text-sm font-medium">Orlando S.</p>
+                      <p className="text-xs text-gray-500">Mentor</p>
                     </div>
                   </div>
-                ))}
+                </div>
+
+                {/* ================= CARD 2 ================= */}
+                <div className="flex flex-col min-w-65 sm:min-w-70 md:min-w-0">
+                  <img
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475"
+                    alt="Frontend"
+                    className="h-40 w-full rounded-xl object-cover mb-3"
+                  />
+
+                  <span className="mb-2 w-fit rounded-full border border-blue-300 bg-blue-100 px-3 py-1 text-xs font-medium text-(--color-text-blue)">
+                    Front End Dev
+                  </span>
+
+                  <p className="text-sm font-medium mb-4">
+                    Build responsive web pages using HTML, CSS, and JavaScript.
+                  </p>
+
+                  <div className="h-1.5 w-full rounded-full bg-gray-200 mb-4">
+                    <div className="h-full w-[45%] rounded-full bg-bg-blue" />
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <img
+                      src="https://randomuser.me/api/portraits/men/45.jpg"
+                      className="h-9 w-9 rounded-full object-cover"
+                    />
+                    <div>
+                      <p className="text-sm font-medium">James A.</p>
+                      <p className="text-xs text-gray-500">Mentor</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* ================= CARD 3 ================= */}
+                <div className="flex flex-col min-w-65 sm:min-w-70 md:min-w-0">
+                  <img
+                    src="https://images.unsplash.com/photo-1511379938547-c1f69419868d"
+                    alt="Sound"
+                    className="h-40 w-full rounded-xl object-cover mb-3"
+                  />
+
+                  <span className="mb-2 w-fit rounded-full border border-blue-300 bg-blue-100 px-3 py-1 text-xs font-medium text-blue-600">
+                    Sound Effects
+                  </span>
+
+                  <p className="text-sm font-medium mb-4">
+                    Create and mix custom audio for games and film projects.
+                  </p>
+
+                  <div className="h-1.5 w-full rounded-full bg-gray-200  mb-4">
+                    <div className="h-full w-[85%] rounded-full bg-blue-600" />
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <img
+                      src="https://randomuser.me/api/portraits/men/67.jpg"
+                      className="h-9 w-9 rounded-full object-cover"
+                    />
+                    <div>
+                      <p className="text-sm font-medium">Richard C.</p>
+                      <p className="text-xs text-gray-500">Mentor</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           {/* ================= STATS ================= */}
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {[
-              { label: "Total Subscribers", value: "71,842", change: "+12%" },
-              { label: "Avg. Open Rate", value: "58.16%", change: "+2.02%" },
-              { label: "Avg. Click Rate", value: "24.57%", change: "-4.05%" },
-            ].map((stat, i) => (
-              <div
-                key={i}
-                className="rounded-xl border border-gray-200 p-6 bg-white"
-              >
-                <p className="text-sm text-gray-500">{stat.label}</p>
-                <p className="mt-2 text-2xl font-bold">{stat.value}</p>
-                <span className="mt-2 inline-block rounded-full bg-blue-100 px-3 py-1 text-xs text-blue-600">
-                  {stat.change}
-                </span>
+          <div className="mt-8 ">
+            <div className="rounded-2xl border border-gray-300 bg-white grid grid-cols-3 divide-x">
+              {/* ===== CARD 1 ===== */}
+              <div className="p-4 sm:px-6 border-r border-gray-300">
+                <p className="text-xs sm:text-sm font-semibold text-(--color-text-black)">
+                  Total Subscribers
+                </p>
+
+                <div className=" flex items-center gap-2 flex-wrap sm:flex-nowrap">
+                  <p className="text-lg sm:text-2xl font-bold text-(--color-text-blue)">
+                    71,842
+                  </p>
+
+                  <span className="rounded-full bg-blue-100 px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-semibold text-(--color-text-blue)">
+                    +12%
+                  </span>
+
+                  <p className="w-full text-xs sm:text-sm text-gray-500">
+                    from 70,946
+                  </p>
+                </div>
               </div>
-            ))}
+
+              {/* ===== CARD 2 ===== */}
+              <div className="p-4 sm:px-6 border-r border-gray-300">
+                <p className="text-xs sm:text-sm font-semibold text-(--color-text-black)">
+                  Avg. Open Rate
+                </p>
+
+                <div className=" flex items-center gap-2 flex-wrap sm:flex-nowrap md:flex-nowrap">
+                  <p className="text-lg sm:text-2xl font-bold text-(--color-text-blue)">
+                    58.16%
+                  </p>
+
+                  <span className="rounded-full bg-blue-100 px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-semibold text-(--color-text-blue)">
+                    +2.02%
+                  </span>
+
+                  <p className="w-full text-xs sm:text-sm text-gray-500">
+                    from 56.14%
+                  </p>
+                </div>
+              </div>
+
+              {/* ===== CARD 3 ===== */}
+              <div className="p-4 sm:px-6">
+                <p className="text-xs sm:text-sm font-semibold text-(--color-text-black)">
+                  Avg. Click Rate
+                </p>
+
+                <div className=" flex items-center gap-2 flex-wrap sm:flex-nowrap md:flex-nowrap ">
+                  <p className="text-lg sm:text-2xl font-bold text-(--color-text-blue)">
+                    24.57%
+                  </p>
+
+                  <span className="rounded-full bg-blue-100 px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-semibold text-(--color-text-blue)">
+                    -4.05%
+                  </span>
+
+                  <p className="w-full text-xs sm:text-sm text-gray-500">
+                    from 28.62%
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 mt-8">
+            {/* ================= LEFT : FEATURE CARDS ================= */}
+            <div className="rounded-3xl border border-gray-200 p-6 bg-white">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {/* CARD 1 */}
+                <div className="rounded-2xl bg-[#6FA8FF] p-6 text-white">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-white/20">
+                    <Heart />
+                  </div>
+                  <h4 className="text-lg font-semibold mb-2">
+                    Manage team access
+                  </h4>
+                  <p className="text-sm leading-relaxed text-white/90">
+                    Control who can view, edit, and approve content across your
+                    organization. Great for admins.
+                  </p>
+                </div>
+
+                {/* CARD 2 */}
+                <div className="rounded-2xl bg-[#3B82F6] p-6 text-white">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-white/20">
+                    <Heart />
+                  </div>
+                  <h4 className="text-lg font-semibold mb-2">
+                    Notifications settings
+                  </h4>
+                  <p className="text-sm leading-relaxed text-white/90">
+                    Customize when and how you receive alerts for important
+                    updates and requests.
+                  </p>
+                </div>
+
+                {/* CARD 3 */}
+                <div className="rounded-2xl bg-[#0B5FFF] p-6 text-white">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-white/20">
+                    <Heart />
+                  </div>
+                  <h4 className="text-lg font-semibold mb-2">
+                    Download reports
+                  </h4>
+                  <p className="text-sm leading-relaxed text-white/90">
+                    Export activity summaries and detailed reports in multiple
+                    file formats, anytime.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* ================= RIGHT : BUTTON STATES ================= */}
+            <div className="rounded-3xl border border-gray-200 p-6 bg-white">
+              <div className="grid grid-cols-4 gap-6 text-center text-sm font-medium">
+                <p>Default</p>
+                <p>Hover</p>
+                <p>Active</p>
+                <p>Disabled</p>
+              </div>
+
+              <div className="mt-6 space-y-6">
+                {/* PRIMARY */}
+                <div className="grid grid-cols-4 gap-6">
+                  <button className="rounded-full bg-blue-600 py-3 text-white font-semibold">
+                    Primary
+                  </button>
+                  <button className="rounded-full bg-blue-700 py-3 text-white font-semibold">
+                    Primary
+                  </button>
+                  <button className="rounded-full bg-blue-800 py-3 text-white font-semibold">
+                    Primary
+                  </button>
+                  <button
+                    disabled
+                    className="rounded-full bg-blue-300 py-3 text-white font-semibold"
+                  >
+                    Primary
+                  </button>
+                </div>
+
+                {/* SECONDARY */}
+                <div className="grid grid-cols-4 gap-6">
+                  <button className="rounded-full bg-blue-100 py-3 text-blue-600 font-semibold">
+                    Secondary
+                  </button>
+                  <button className="rounded-full bg-blue-200 py-3 text-blue-700 font-semibold">
+                    Secondary
+                  </button>
+                  <button className="rounded-full bg-blue-300 py-3 text-blue-800 font-semibold">
+                    Secondary
+                  </button>
+                  <button
+                    disabled
+                    className="rounded-full bg-blue-200 py-3 text-white font-semibold"
+                  >
+                    Secondary
+                  </button>
+                </div>
+
+                {/* TERTIARY */}
+                <div className="grid grid-cols-4 gap-6">
+                  <button className="rounded-full border border-blue-600 py-3 text-blue-600 font-semibold">
+                    Tertiary
+                  </button>
+                  <button className="rounded-full border border-blue-600 bg-blue-50 py-3 text-blue-600 font-semibold">
+                    Tertiary
+                  </button>
+                  <button className="rounded-full bg-blue-200 py-3 text-blue-800 font-semibold">
+                    Tertiary
+                  </button>
+                  <button
+                    disabled
+                    className="rounded-full border border-blue-300 py-3 text-blue-300 font-semibold"
+                  >
+                    Tertiary
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </div>
