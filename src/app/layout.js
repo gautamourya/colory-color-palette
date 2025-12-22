@@ -1,6 +1,7 @@
 import ConditionalNavbar from "@/components/navbar/ConditionalNavbar";
 import "../style/globals.css";
 
+
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
 //   subsets: ["latin"],

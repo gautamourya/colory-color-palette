@@ -59,6 +59,13 @@ export default function Navbar() {
               >
                 Sign up
               </Link>
+
+              <Link
+                href="/dashboard"
+                className="ml-1 rounded-md bg-blue-600 px-4 py-2 text-base font-semibold text-white hover:bg-blue-700 transition"
+              >
+                Dashboard
+              </Link>
             </nav>
 
             {/* MOBILE MENU ICON */}
