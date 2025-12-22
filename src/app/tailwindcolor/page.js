@@ -88,7 +88,7 @@ export default function TailwindColorsPage() {
 
           {/* ================= first ROW ================= */}
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid  grid-cols-1 min-[800px]:grid-cols-2 min-[1120px]:grid-cols-3 gap-6 pb-7 ">
             {/* ================= LEFT CARD ================= */}
             <div className="rounded-2xl bg-[#CCE0FF] p-6 flex flex-col justify-between">
               <div>
@@ -109,30 +109,7 @@ export default function TailwindColorsPage() {
               </button>
             </div>
 
-            {/* ================= CATEGORIES ================= */}
-            {/* <div className="rounded-2xl border border-gray-200 p-6">
-              <h4 className="text-lg font-semibold mb-6">Categories</h4>
-
-              <div className="grid grid-cols-4 gap-5 text-center">
-                {[
-                  "Grocery Stores",
-                  "Cafe and Restaurants",
-                  "Utilities",
-                  "Sport",
-                  "Taxi",
-                  "Pharmacies",
-                  "Telecom service",
-                  "Gadgets",
-                ].map((item, i) => (
-                  <div key={i}>
-                    <div className="mx-auto mb-2 h-14 w-14 rounded-full bg-blue-200 flex items-center justify-center text-blue-700 font-bold">
-                      ⦿
-                    </div>
-                    <p className="text-xs font-medium text-gray-800">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </div> */}
+      
 
             <div className="rounded-2xl border border-gray-200 p-6 sm:p-8 lg:p-10">
               <h4 className="mb-6 text-base sm:text-lg font-semibold text-black">
@@ -144,7 +121,7 @@ export default function TailwindColorsPage() {
                 {/* Grocery */}
                 <div className="flex flex-col items-center">
                   <div className="mb-2 flex h-14 w-14 sm:h-16 sm:w-16 lg:h-18 lg:w-18 items-center justify-center rounded-full bg-blue-200">
-                    <Camera className="text-blue-700" size={22} />
+                    <Camera className="text-blue-700" size={35} />
                   </div>
                   <p className="text-xs sm:text-sm font-medium text-gray-800 leading-tight">
                     Grocery Stores
@@ -154,7 +131,7 @@ export default function TailwindColorsPage() {
                 {/* Cafe */}
                 <div className="flex flex-col items-center">
                   <div className="mb-2 flex h-14 w-14 sm:h-16 sm:w-16 lg:h-18 lg:w-18 items-center justify-center rounded-full bg-blue-300">
-                    <Heart className="text-blue-800" size={22} />
+                    <Heart className="text-blue-800" size={35} />
                   </div>
                   <p className="text-xs sm:text-sm font-medium text-gray-800 leading-tight">
                     Cafe & Restaurants
@@ -164,7 +141,7 @@ export default function TailwindColorsPage() {
                 {/* Utilities */}
                 <div className="flex flex-col items-center">
                   <div className="mb-2 flex h-14 w-14 sm:h-16 sm:w-16 lg:h-18 lg:w-18 items-center justify-center rounded-full bg-blue-100">
-                    <Glasses className="text-blue-700" size={22} />
+                    <Glasses className="text-blue-700" size={35} />
                   </div>
                   <p className="text-xs sm:text-sm font-medium text-gray-800">
                     Utilities
@@ -174,7 +151,7 @@ export default function TailwindColorsPage() {
                 {/* Sport */}
                 <div className="flex flex-col items-center">
                   <div className="mb-2 flex h-14 w-14 sm:h-16 sm:w-16 lg:h-18 lg:w-18 items-center justify-center rounded-full bg-blue-200">
-                    <Shapes className="text-blue-700" size={22} />
+                    <Shapes className="text-blue-700" size={35} />
                   </div>
                   <p className="text-xs sm:text-sm font-medium text-gray-800">
                     Sport
@@ -184,7 +161,7 @@ export default function TailwindColorsPage() {
                 {/* Taxi */}
                 <div className="flex flex-col items-center">
                   <div className="mb-2 flex h-14 w-14 sm:h-16 sm:w-16 lg:h-18 lg:w-18 items-center justify-center rounded-full bg-blue-300">
-                    <Eye className="text-blue-800" size={22} />
+                    <Eye className="text-blue-800" size={35} />
                   </div>
                   <p className="text-xs sm:text-sm font-medium text-gray-800">
                     Taxi
@@ -194,7 +171,7 @@ export default function TailwindColorsPage() {
                 {/* Pharmacies */}
                 <div className="flex flex-col items-center">
                   <div className="mb-2 flex h-14 w-14 sm:h-16 sm:w-16 lg:h-18 lg:w-18 items-center justify-center rounded-full bg-blue-100">
-                    <Settings className="text-blue-700" size={22} />
+                    <Settings className="text-blue-700" size={35} />
                   </div>
                   <p className="text-xs sm:text-sm font-medium text-gray-800">
                     Pharmacies
@@ -204,7 +181,7 @@ export default function TailwindColorsPage() {
                 {/* Telecom */}
                 <div className="flex flex-col items-center">
                   <div className="mb-2 flex h-14 w-14 sm:h-16 sm:w-16 lg:h-18 lg:w-18 items-center justify-center rounded-full bg-blue-200">
-                    <Upload className="text-blue-700" size={22} />
+                    <Upload className="text-blue-700" size={35} />
                   </div>
                   <p className="text-xs sm:text-sm font-medium text-gray-800 leading-tight">
                     Telecom service
@@ -214,7 +191,7 @@ export default function TailwindColorsPage() {
                 {/* Gadgets */}
                 <div className="flex flex-col items-center">
                   <div className="mb-2 flex h-14 w-14 sm:h-16 sm:w-16 lg:h-18 lg:w-18 items-center justify-center rounded-full bg-blue-300">
-                    <Wand2 className="text-blue-800" size={22} />
+                    <Wand2 className="text-blue-800" size={35} />
                   </div>
                   <p className="text-xs sm:text-sm font-medium text-gray-800">
                     Gadgets
@@ -310,13 +287,12 @@ export default function TailwindColorsPage() {
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* ================= SECOND ROW ================= */}
-          <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {/* Newsletter */}
-            <div className="rounded-2xl border border-gray-200 p-6 space-y-4">
+              {/* Newsletter */}
+            <div className="rounded-2xl border border-gray-200 p-6 flex flex-col gap-5">
+
               <div className="bg-gray-100 rounded-xl p-8 hover:bg-(--color-hover-gray)">
+
                 <p className="font-semibold lg:text-2xl">Newsletter</p>
                 <p className="text-xs lg:text-base text-[#787878]">
                   Last message sent an hour ago
@@ -343,9 +319,10 @@ export default function TailwindColorsPage() {
                   Last message sent 4 days ago
                 </p>
               </div>
+
             </div>
 
-            <div className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-6">
+              <div className="rounded-2xl border border-gray-200 bg-white p-5 sm:p-6">
               {/* Header */}
               <div className="mb-6 flex items-center justify-between">
                 <h4 className="text-lg font-semibold text-black">Schedule</h4>
@@ -429,7 +406,7 @@ export default function TailwindColorsPage() {
             </div>
 
             {/* Profile */}
-            <div className="rounded-3xl bg-blue-100 p-4 sm:p-5 ">
+            <div className="rounded-3xl bg-blue-100 p-4 sm:p-5  ">
               {/* IMAGE */}
               <div className="w-full overflow-hidden rounded-2xl">
                 <img
@@ -453,11 +430,21 @@ export default function TailwindColorsPage() {
                 </span>
               </div>
             </div>
+
+
+
           </div>
+
+{/* <div className="grid grid-cols-1 min-[650px]:grid-cols-2 gap-6">
+
+</div> */}
+
+
         </section>
 
         <section className="pb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 ">
+
+          <div className="grid grid-cols-1 min-[1120px]:grid-cols-[1.5fr_3fr] gap-6">
             {/* ================= REVENUE ================= */}
 
             <div className="rounded-2xl border border-gray-200  p-6 flex flex-col bg-white">
@@ -523,104 +510,102 @@ export default function TailwindColorsPage() {
             </div>
 
             {/* ================= PRICING ================= */}
-            <div className="rounded-2xl border border-gray-200 p-6 bg-white">
+            <div className="rounded-2xl border border-gray-200 p-6 bg-white ">
               <h3 className="text-lg font-semibold mb-6">Pricing plans</h3>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                {/* ================= INDIVIDUAL ================= */}
-                <div className="rounded-2xl border border-[#6EA3FF] bg-linear-to-br from-[#A6C8FF] via-[#C1DAFF] to-[#DDEBFF] p-6 flex flex-col gap-5">
-                  {/* Icon */}
-                  <div className="h-10 w-10 rounded-full bg-blue-600/20 flex items-center justify-center">
-                    <Heart
-                      className="text-[#0B57D0]"
-                      size={22}
-                      strokeWidth={2}
-                    />
-                  </div>
+            <div
+  className="
+    items-stretch
+    flex gap-4 overflow-x-auto
+    md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:flex-none
+    [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden
+  "
+>
+  {/* ================= INDIVIDUAL ================= */}
+  <div className="rounded-2xl border border-[#6EA3FF] bg-linear-to-br from-[#A6C8FF] via-[#C1DAFF] to-[#DDEBFF] p-6 flex flex-col gap-5 h-full min-w-[260px] md:min-w-0">
+    {/* Icon */}
+    <div className="h-10 w-10 rounded-full bg-blue-600/20 flex items-center justify-center">
+      <Heart className="text-[#0B57D0]" size={22} strokeWidth={2} />
+    </div>
 
-                  {/* Content */}
-                  <div>
-                    <h4 className="text-lg font-semibold text-black">
-                      Individual
-                    </h4>
+    {/* Content */}
+    <div>
+      <h4 className="text-lg font-semibold text-black">Individual</h4>
 
-                    <p className=" mt-2 text-3xl font-bold">
-                      $0
-                      <span className="ml-1 text-sm font-medium text-gray-600">
-                        per month
-                      </span>
-                    </p>
+      <p className="mt-2 text-3xl font-bold">
+        $0
+        <span className="ml-1 text-sm font-medium text-gray-600">
+          per month
+        </span>
+      </p>
 
-                    <p className="mt-3 text-sm text-gray-600">
-                      Perfect for freelancers or hobbyists starting out.
-                    </p>
-                  </div>
+      <p className="mt-3 text-sm text-gray-600">
+        Perfect for freelancers or hobbyists starting out.
+      </p>
+    </div>
 
-                  {/* Button */}
-                  <button className="mt-4 rounded-full bg-[#0B57D0] py-2.5 text-white font-semibold hover:bg-[#0949B0] transition">
-                    Get started
-                  </button>
-                </div>
+    {/* Button */}
+    <button className="mt-auto rounded-full bg-[#0B57D0] py-2.5 text-white font-semibold hover:bg-[#0949B0] transition">
+      Get started
+    </button>
+  </div>
 
-                {/* ================= TEAM ================= */}
-                <div className="rounded-2xl border border-[#6EA3FF] bg-linear-to-br from-[#A6C8FF] via-[#C1DAFF] to-[#DDEBFF] p-6   flex flex-col gap-5">
-                  <div className="h-10 w-10 rounded-full bg-blue-600/20 flex items-center justify-center">
-                    <Eye className="text-[#0B57D0]" size={22} strokeWidth={2} />
-                  </div>
+  {/* ================= TEAM ================= */}
+  <div className="rounded-2xl border border-[#6EA3FF] bg-linear-to-br from-[#A6C8FF] via-[#C1DAFF] to-[#DDEBFF] p-6 flex flex-col gap-5 h-full min-w-[260px] md:min-w-0">
+    <div className="h-10 w-10 rounded-full bg-blue-600/20 flex items-center justify-center">
+      <Eye className="text-[#0B57D0]" size={22} strokeWidth={2} />
+    </div>
 
-                  <div>
-                    <h4 className=" text-lg font-semibold text-black">Team</h4>
+    <div>
+      <h4 className="text-lg font-semibold text-black">Team</h4>
 
-                    <p className="mt-2 text-3xl font-bold">
-                      $99
-                      <span className="ml-1 text-sm font-medium text-gray-600">
-                        per month
-                      </span>
-                    </p>
+      <p className="mt-2 text-3xl font-bold">
+        $99
+        <span className="ml-1 text-sm font-medium text-gray-600">
+          per month
+        </span>
+      </p>
 
-                    <p className="mt-3 text-sm text-gray-600">
-                      Ideal for growing teams that need collaboration tools.
-                    </p>
-                  </div>
+      <p className="mt-3 text-sm text-gray-600">
+        Ideal for growing teams that need collaboration tools.
+      </p>
+    </div>
 
-                  <button className="mt-4 rounded-full bg-[#0B57D0] py-2.5 text-white font-semibold hover:bg-[#0949B0] transition">
-                    Get started
-                  </button>
-                </div>
+    <button className="mt-auto rounded-full bg-[#0B57D0] py-2.5 text-white font-semibold hover:bg-[#0949B0] transition">
+      Get started
+    </button>
+  </div>
 
-                {/* ================= ENTERPRISE ================= */}
-                <div className="rounded-2xl border border-[#6EA3FF] bg-linear-to-br from-[#A6C8FF] via-[#C1DAFF] to-[#DDEBFF] p-6 flex flex-col gap-5">
-                  <div className="h-10 w-10 rounded-full bg-blue-600/20 flex items-center justify-center">
-                    <Star
-                      className="text-[#0B57D0]"
-                      size={22}
-                      strokeWidth={2}
-                    />
-                  </div>
+  {/* ================= ENTERPRISE ================= */}
+  <div className="rounded-2xl border border-[#6EA3FF] bg-linear-to-br from-[#A6C8FF] via-[#C1DAFF] to-[#DDEBFF] p-6 flex flex-col gap-5 h-full min-w-[260px] md:min-w-0">
+    <div className="h-10 w-10 rounded-full bg-blue-600/20 flex items-center justify-center">
+      <Star className="text-[#0B57D0]" size={22} strokeWidth={2} />
+    </div>
 
-                  <div>
-                    <h4 className=" text-lg font-semibold text-black">
-                      Enterprise
-                    </h4>
+    <div>
+      <h4 className="text-lg font-semibold text-black">Enterprise</h4>
 
-                    <p className=" mt-2 text-3xl font-bold">
-                      $199
-                      <span className="ml-1 text-sm font-medium text-gray-600">
-                        per month
-                      </span>
-                    </p>
+      <p className="mt-2 text-3xl font-bold">
+        $199
+        <span className="ml-1 text-sm font-medium text-gray-600">
+          per month
+        </span>
+      </p>
 
-                    <p className="mt-3 text-sm text-gray-600">
-                      Designed for large organizations with custom needs.
-                    </p>
-                  </div>
+      <p className="mt-3 text-sm text-gray-600">
+        Designed for large organizations with custom needs.
+      </p>
+    </div>
 
-                  <button className="mt-4 rounded-full bg-[#0B57D0] py-2.5 text-white font-semibold hover:bg-[#0949B0] transition">
-                    Contact us
-                  </button>
-                </div>
-              </div>
+    <button className="mt-auto rounded-full bg-[#0B57D0] py-2.5 text-white font-semibold hover:bg-[#0949B0] transition">
+      Contact us
+    </button>
+  </div>
+</div>
+
             </div>
+
+
           </div>
 
           {/* ================= SECOND ROW ================= */}
